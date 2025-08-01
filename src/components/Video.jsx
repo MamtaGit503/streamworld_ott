@@ -94,7 +94,9 @@ const Video = ({ id }) => {
           </div>
 
           {/* Right: Slider List */}
-          <div className="w-full lg:w-[400px] max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60">
+          {/* <div className="w-full lg:w-[400px] max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60"> */}
+          <div className="w-full lg:w-[400px] h-[300px] lg:h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60">
+
             <Swiper
               direction="vertical"
               spaceBetween={20}
