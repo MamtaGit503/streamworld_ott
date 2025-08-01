@@ -39,6 +39,7 @@ npm run dev
 
 
 ## Author
-developed by Mamta
+developed by Mamta.
+
 feel free to reach out
 
