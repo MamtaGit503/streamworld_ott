@@ -94,7 +94,7 @@ const Video = ({ id }) => {
           </div>
 
           {/* Right: Slider List */}
-          <div className="w-full lg:w-[400px] max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60">
+          {/* <div className="w-full lg:w-[400px] max-h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60">
             <Swiper
               direction="vertical"
               spaceBetween={20}
@@ -128,7 +128,47 @@ const Video = ({ id }) => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div> */}
+
+
+          <div className="w-full lg:w-[400px]">
+  <div className="h-[300px] lg:h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60 pr-2">
+    <Swiper
+      direction="vertical"
+      spaceBetween={20}
+      slidesPerView="auto"
+      autoplay={{ delay: 2500, disableOnInteraction: false }}
+      modules={[Autoplay]}
+    >
+      {videos.map((video) => (
+        <SwiperSlide key={video.id} className="!h-auto">
+          <div className="flex gap-4 items-start bg-gradient-to-b from-[#1c1c1c] to-[#121212] p-3 rounded-xl">
+            <img
+              src={video.image}
+              alt={video.title}
+              className="w-20 h-20 object-cover rounded-lg cursor-pointer"
+              onClick={() => openModal(video.youtube)}
+            />
+            <div className="flex-1">
+              <p className="text-sm text-gray-400">{video.time}</p>
+              <h3 className="text-lg font-semibold">{video.title}</h3>
+              <p className="text-sm text-gray-400">{video.subtitle}</p>
+              <div className="flex items-center gap-4 mt-2 text-sm text-[#a70d65]">
+                <span className="flex items-center gap-1">
+                  <FaEye /> 345
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaHeart /> 34
+                </span>
+              </div>
+            </div>
           </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
+
         </div>
       </div>
 
