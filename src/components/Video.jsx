@@ -129,7 +129,6 @@ const Video = ({ id }) => {
               ))}
             </Swiper>
           </div> */}
-          {/* Right: Slider List */}
 <div className="w-full lg:w-[400px]">
   <div className="max-h-full lg:max-h-[500px] lg:overflow-y-auto scrollbar-thin scrollbar-thumb-[#a70d65]/60 pr-2">
     <Swiper
